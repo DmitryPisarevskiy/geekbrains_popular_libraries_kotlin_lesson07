@@ -10,6 +10,7 @@ import ru.geekbrains.geekbrains_popular_libraries_kotlin.mvp.model.network.INetw
 class AndroidNetworkStatus(context: Context) : INetworkStatus {
     private val statusSubject: BehaviorSubject<Boolean> = BehaviorSubject.create()
 
+
     init {
         statusSubject.onNext(false)
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
